@@ -97,7 +97,7 @@
                 <option value="Large-42">Large (42)</option>
                 <option value="XL-44">XL (44)</option>
                 <option value="XXL-46">XXL (46)</option>
-                <option value="XXL-48">XXXL (48)</option>
+                <option value="XXXL-48">XXXL (48)</option>
             </select>
         </div>
         <div class="form-group">
@@ -120,33 +120,9 @@
     </form>
 </div>
 
-<!-- <script>
-    document.getElementById('cricketForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const playerName = document.getElementById('playerName').value;
-        const tShirtSize = document.getElementById('tShirtSize').value;
-        const nameOnTShirt = document.getElementById('nameOnTShirt').value;
-        const numberOnTShirt = document.getElementById('numberOnTShirt').value;
-        const tShirtLength = document.getElementById('tShirtLength').value;
-
-        const details = {
-            playerName: playerName,
-            tShirtSize: tShirtSize,
-            nameOnTShirt: nameOnTShirt,
-            numberOnTShirt: numberOnTShirt,
-            tShirtLength: tShirtLength
-        };
-
-        console.log(details); 
-        alert(`Player Name: ${details.playerName}\nT-Shirt Size: ${details.tShirtSize}\nName on T-Shirt: ${details.nameOnTShirt}\nNumber on T-Shirt: ${details.numberOnTShirt}\nT-Shirt Length: ${details.tShirtLength} inches`);
-        document.getElementById('cricketForm').reset();
-    });
-</script> -->
-
 <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbzBoXGhoQguFyMe7KJzH62bDl4-eYJ1BA1aVf8UQcSZhVEOpo5R9fdUkYeQnxL-SAyN/exec';
     const form = document.getElementById('cricketForm')
-    console.log("🚀 -->> form:", form)
     form.addEventListener('submit', e => {
         e.preventDefault()
         fetch(scriptURL, { method: 'POST', body: new FormData(form) })
